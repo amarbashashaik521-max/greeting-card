@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+   text-align:center;
+   background-color:rgb(50, 96, 122);
+   font-family:Geargia;
+}
+
+.card{
+   width:700px;
+   margin:auto;
+   padding:30px;
+   background-color:white;
+   border-radius:20px;
+   box-shadow:0px 0px 20px rgba(0,0,0,0.3);
+   text-align:center;
+   transition:0.5s;
+   animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn{
+   from{
+      opacity:0;
+      transform:translateY(20px);
+   }
+
+   to{
+      opacity:1;
+      transform:translateY(0);
+   }
+}
+
+button,input{
+   padding:12px 20px;
+   border:none;
+   border-radius:25px;
+   background-color:#f8b6c2;
+   cursor:pointer;
+   font-size:16px;
+   margin:5px;
+}
+
+input:hover, button:hover{
+   background-color:hotpink;
+}
+
+button:hover{
+   transform:translate(-50%,-50%) scale(1.05);
+}
+
+h1{
+   color:deeppink;
+}
+
+h2{
+   color:purple;
+}
+p{
+   font-size:18px;
+   line-height:1.6;
+}
+
+</style>
+</head>
+
+
+
+<body>
+
+
+
+<div id="cover" style="display:block; position:relative; width:400px; margin:auto;">
+   <img src="envelope.png" width="400">
+   <button
+      onclick="openCard()"
+      style="
+         position:absolute;
+         top:60%;
+         left:50%;
+         transform:translate(-50%,-50%);
+         background-color:pink;
+      ">
+      💌 Open Letter
+   </button>
+</div>
+  
+<div id="page1" class="card" style="display:none">
+   <h1>💙 Greeting Card 💙</h1>
+   <h2>Welcome🖤</h2> 
+   <p>
+   	I made this little card to share some memories,
+     	thoughts, and moments that mean a lot to me.
+   </p>   
+
+
+   <p>Welcome to my card </p>
+   <input type="button" value="Back" onclick="back1()">
+   <input type="button" value="Next" onclick="next1()">
+</div>
+
+<div id="page2" class="card" style="display:none">
+   <h2>How We Met</h2>
+   <p>...</p>
+   <input type="button" value="Back" onclick="back2()">
+   <input type="button" value="Next" onclick="next2()">
+</div>
+
+<div id="page3" class="card" style="display:none">
+   <h2>Where It Started</h2>
+   <p>...</p>
+   <input type="button" value="Back" onclick="back3()">
+   <input type="button" value="Next" onclick="next3()">
+</div>
+
+<div id="page4" class="card" style="display:none">
+   <h2>Memories I Still Remember</h2>
+   <p>...</p>
+   <input type="button" value="Back" onclick="back4()">
+   <input type="button" value="Next" onclick="next4()">
+</div>
+
+<div id="page5" class="card" style="display:none">
+   <h2>Things You Never Knew</h2>
+   <p>...</p>
+   <input type="button" value="Back" onclick="back5()">
+   <input type="button" value="Next" onclick="next5()">
+</div>
+
+
+<div id="page6" class="card" style="display:none">
+   <h2>Difficult Days</h2>
+   <p>...</p>
+   <input type="button" value="Back" onclick="back6()">
+   <input type="button" value="Next" onclick="next6()">
+</div>
+
+<div id="page7" class="card" style="display:none">
+   <h2>Thank You</h2>
+   <p>...</p>
+   <input type="button" value="Back" onclick="back7()">
+   <input type="button" value="Next" onclick="next7()">
+</div>
+
+<div id="page8" class="card" style="display:none">
+   <h2>Final Message</h2>
+   <p>💙 Thank you for reading my little card 💙</p>
+   <input type="button" value="Back" onclick="back8()">
+   <input type="button" value="Back to Cover" onclick="backToCover()">
+</div>
+
+<script>
+function openCard()
+{
+   document.getElementById("cover").style.display="none";
+   document.getElementById("page1").style.display="block";
+}
+function next1()
+{  
+   let page1 = document.getElementById("page1");
+   let page2 = document.getElementById("page2");
+
+   page2.style.display="block";
+   page1.style.display="none";
+ } 
+function next2()
+{  
+   let page2 = document.getElementById("page2");
+   let page3 = document.getElementById("page3");
+
+   page3.style.display="block";
+   page2.style.display="none";
+   
+}
+function next3()
+{
+   let page3 = document.getElementById("page3");
+   let page4 = document.getElementById("page4");
+  
+    page4.style.display="block";
+    page3.style.display="none";
+}
+function next4()
+{
+   let page4 = document.getElementById("page4");
+   let page5 = document.getElementById("page5");
+  
+    page5.style.display="block";
+    page4.style.display="none";
+}
+function next5()
+{
+   let page5 = document.getElementById("page5");
+   let page6 = document.getElementById("page6");
+  
+    page6.style.display="block";
+    page5.style.display="none";
+}
+
+function next6()
+{
+   let page6 = document.getElementById("page6");
+   let page7 = document.getElementById("page7");
+  
+    page7.style.display="block";
+    page6.style.display="none";
+}
+function next7()
+{
+   let page7 = document.getElementById("page7");
+   let page8 = document.getElementById("page8");
+  
+    page8.style.display="block";
+    page7.style.display="none";
+}
+
+
+function back1()
+{  
+   let cover = document.getElementById("cover");
+   let page1 = document.getElementById("page1");
+
+   page1.style.display="none";
+   cover.style.display="block";
+} 
+function back2()
+{  
+   let page1 = document.getElementById("page1");
+   let page2 = document.getElementById("page2");
+
+   page2.style.display="none";
+   page1.style.display="block";
+} 
+function back3()
+{  
+   let page2 = document.getElementById("page2");
+   let page3 = document.getElementById("page3");
+
+   page3.style.display="none";
+   page2.style.display="block";
+} 
+function back4()
+{  
+   let page3 = document.getElementById("page3");
+   let page4 = document.getElementById("page4");
+
+   page4.style.display="none";
+   page3.style.display="block";
+} 
+function back5()
+{  
+   let page4 = document.getElementById("page4");
+   let page5 = document.getElementById("page5");
+
+   page5.style.display="none";
+   page4.style.display="block";
+ } 
+function back6()
+{  
+   let page5 = document.getElementById("page5");
+   let page6 = document.getElementById("page6");
+
+   page6.style.display="none";
+   page5.style.display="block";
+ } 
+function back7()
+{  
+   let page6 = document.getElementById("page6");
+   let page7 = document.getElementById("page7");
+
+   page7.style.display="none";
+   page6.style.display="block";
+ } 
+function back8()
+{  
+   let page7 = document.getElementById("page7");
+   let page8 = document.getElementById("page8");
+
+   page8.style.display="none";
+   page7.style.display="block";
+ } 
+function backToCover()
+{
+   document.getElementById("page8").style.display="none";
+   document.getElementById("cover").style.display="block";
+}
+</script>
+</body>
+</html>
