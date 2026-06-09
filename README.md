@@ -1,2 +1,19 @@
-# greeting-card
-A personal interactive greeting card built using HTML, CSS, and JavaScript. Features multiple pages, animations, navigation buttons, and a custom envelope cover design.
+# Greeting Card Project
+
+A multi-page interactive greeting card built with:
+
+- HTML
+- CSS
+- JavaScript
+
+## Features
+
+- Envelope-style cover page
+- Next/Back navigation
+- Animated transitions
+- Responsive card design
+- Personalized message pages
+
+## Purpose
+
+This project was created to practice frontend web development using HTML, CSS, and JavaScript.
